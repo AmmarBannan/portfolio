@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style/common.css"> -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <ul class="container">
+        <li class="card personal_info 0">
+            <div class="personal_info__id">
+                <h2 class="name">Ammar Bannan</h2>
+                <img class="personal_info__id__image" src="./static/ammar.png" alt="">
+                <h3 class="personal_info__id__text">
+                Hello, I'm<span> Ammar Bannan</span><br>
+                A <span class="entitle">full stack</span> and <span class="entitle">DevOps</span><br>
+                </h3>
+            </div>
+            <div class="extra">
+                <h4>Things to know about me:</h4>
+                <p>always looking to improve my skills technical or socialy, cerativty on the top of my feature</p>
+            </div>
+        </li>
+        <li class="card contact 1">
+            <h3 class="contact__text">
+                I will be very happy if you contact me by any of the links below or at least a leave a comment or a feedback will be nice
+            </h3>
+            <ul class="contact__list list">
+                <li class="contact__List___item">Gmail :<a class="link" href="">ammarabannan@gmail.com</a></li>
+                <li class="contact__List___item">Phone# :<a class="link" href="">+972 58-424-2107</a></li>
+                <li class="contact__List___item">GitHub :<a class="link" href="">AmmarBannan</a></li>
+                <li class="contact__List___item">LinkedIn:<a class="link" href="">AmmarBannan</a></li>
+            </ul>
+        </li>
+        <li class="card Projects 2">
+            <h3 class="Projects__text">
+                Here is a list of my project:
+            </h3>
+            <div class="filter">
+                <select class="filter__language" name="filter">
+                    <option disabled selected value> -- select a language -- </option>
+                    <option value="">All</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Bash">Bash</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="NodeJS">NodeJS</option>
+                    <option value="Express">Express</option>
+                    <option value="MongoDB">MongoDB</option>
+                </select>
+                <input class="filter__Date" type="button" value="Date">
+            </div>
+            <table class="projectsList">
+            </table>
+        </li>
+    </ul>
+    <script async src="./Script/cards.js"></script>
+    <script async src="./Script/projects.js"></script>
+</body>
+</html>
