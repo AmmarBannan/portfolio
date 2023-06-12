@@ -10,7 +10,7 @@
 </head>
 <body>
     <ul class="container">
-        <li class="card personal_info 0">
+        <li class="card personal_info" id="0" onclick="selectCard(0)">
             <div class="personal_info__id">
                 <h2 class="name">Ammar Bannan</h2>
                 <img class="personal_info__id__image" src="./static/ammar.png" alt="">
@@ -24,7 +24,7 @@
                 <p>always looking to improve my skills technical or socialy, cerativty on the top of my feature</p>
             </div>
         </li>
-        <li class="card contact 1">
+        <li class="card contact 1" id="1" onclick="selectCard(1)">
             <h3 class="contact__text">
                 I will be very happy if you contact me by any of the links below or at least a leave a comment or a feedback will be nice
             </h3>
@@ -35,7 +35,7 @@
                 <li class="contact__List___item">LinkedIn:<a class="link" href="">AmmarBannan</a></li>
             </ul>
         </li>
-        <li class="card Projects 2">
+        <li class="card Projects" id="2" onclick="selectCard(2)">
             <h3 class="Projects__text">
                 Here is a list of my project:
             </h3>
@@ -59,7 +59,13 @@
             <table class="projectsList">
             </table>
         </li>
-    </ul>
+        <li class="card Projects" id="3" onclick="selectCard(3)"> </li>
+        <li class="card Projects" id="4" onclick="selectCard(4)"></li>
+        <li class="card Projects" id="5" onclick="selectCard(5)"></li>
+        <li class="card Projects" id="6" onclick="selectCard(6)"></li>
+        <li class="card Projects" id="7" onclick="selectCard(7)"></li>
+        <li class="card Projects" id="8" onclick="selectCard(8)"></li>
+        </ul>
     <script async src="./Script/cards.js"></script>
     <script async src="./Script/projects.js"></script>
 </body>

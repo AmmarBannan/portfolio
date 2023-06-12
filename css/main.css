@@ -75,7 +75,6 @@ body {
 .container > li {
   top: 60px;
   padding: 10px;
-  margin-right: 60px;
   min-height: -moz-fit-content;
   min-height: fit-content;
   width: 440px;
@@ -87,6 +86,8 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 40px 14px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .container > li::before {
   position: absolute;

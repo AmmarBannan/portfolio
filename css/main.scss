@@ -28,7 +28,6 @@ body{
      >li{
         top: 60px;
         padding: 10px;
-        margin-right: 60px;
         min-height: fit-content;
         width: 440px;
         padding: 50px 40px;
@@ -39,6 +38,7 @@ body{
         display: flex;
         flex-direction: column ;
         border-radius: 40px 14px;
+        height: fit-content;
         &::before{
             position: absolute;
             width: fit-content;
