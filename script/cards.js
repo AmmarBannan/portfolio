@@ -1,39 +1,42 @@
 
-let postion=(cardId,i=0)=>{
+let edit=(cardId,i=0)=>{
     let posI=Math.abs(i)
     let card=document.getElementsByClassName("card")[cardId]
-    let shift=480*Math.sign(i)*Math.pow(.6,Math.abs(2-posI))+220
-    console.log("cal",shift)
+    let img=document.querySelector(".card img")[cardId]
+
+
+    let left=480*Math.sign(i)*Math.pow(.6,Math.abs(2-posI))-i*i*15+200
+    //width
+    let width=Math.abs(30-Math.pow(posI,2)*2)
+    let widthPX=width/100*window.innerWidth
+    //height
+    let height=1.538*widthPX
+
     //position
-    card.style.left=`calc(50% - ${shift}px)`;
-    card.style.top=`calc(15% + ${posI*30}px)`;
+    card.style.left=`calc(50% - ${left}px)`;
+    card.style.top=`calc(10% + ${posI*30}px)`;
     //zindex
     card.style.zIndex=4-Math.abs(i)
     //size
-    card.style.height=`${700*Math.pow(.9,posI*2)}px`
-    card.style.width=`${440*Math.pow(.9,posI*2)}px`
+    card.style.height=`${height}px`
+    card.style.width=`${width}%`
+
+    console.log(widthPX*.012)
+    card.style.fontSize=`${widthPX*.036}px`
+    card.style.padding=`${widthPX*.008}% ${widthPX*.004}%`
 }
 
 let sort=(j=0,len=9)=>{
-    postion(j)
+    edit(j)
     for(let i=1;i!=Math.ceil((len+1)/2);i++){
-        console.log(i)
-        let right=i+j>len-1?i+j-len:j+i
-        let left=j-i<0?len-(i-j):j-i
-        if(right!==j)postion(right,-i)
-        if(left!==j)postion(left,i)
+        let right=i+j>len-1?i+j-len:j+i //check which one shifted to right
+        let left=j-i<0?len-(i-j):j-i//check which one shifted to left
+        if(right!==j)edit(right,-i)
+        if(left!==j)edit(left,i)
     }
 }
 
-
 sort()
-// classList.contains("foo")
-// while(i<3){
-//     document.getElementsByClassName("card")[i].style.left=`${i*480}px`;
-//     i++;
-// }
-
-
 
 let selectCard=(num)=>{
     sort(num)
