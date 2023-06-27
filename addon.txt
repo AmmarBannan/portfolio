@@ -1,0 +1,6 @@
+<p>
+  course is taking by <span>Guru Cloud</span> and under instruction of expressed AWS Devops employee,
+  starting with lunix practicing and using bash commands,
+  creating DNS server(Bind9),post server(postfix) with schedule post sending(cron),
+  Enable HTTPS Protocol with Apache 2 on Ubuntu
+</p>

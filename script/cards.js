@@ -22,11 +22,11 @@ let edit=(cardId,i=0)=>{
     card.style.width=`${width}%`
 
     console.log(widthPX*.012)
-    card.style.fontSize=`${widthPX*.036}px`
+    card.style.fontSize=`${widthPX*.032}px`
     card.style.padding=`${widthPX*.008}% ${widthPX*.004}%`
 }
 
-let sort=(j=0,len=9)=>{
+let sort=(j=3,len=9)=>{
     edit(j)
     for(let i=1;i!=Math.ceil((len+1)/2);i++){
         let right=i+j>len-1?i+j-len:j+i //check which one shifted to right

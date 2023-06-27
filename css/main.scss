@@ -21,19 +21,35 @@ body{
 }
 .link { text-decoration: none; color: inherit; cursor: pointer;height: fit-content;}
 .list { list-style: none; padding: 0; margin: 0;} 
-.container{
+
+
+#card0{
+    background-color: #0a3d7b;
+ }
+#card1{
+    background-color: green;
+}
+#card2{
+    background-color: rgb(61, 69, 61);
+}
+#card3{
+    background-color: gold;
+}
+#card4{
+    background-color: rgb(52, 196, 12);
+}
+.wrapper{
     text-align: center;
     display: flex;
-    padding: 60px;
-     >li{
+    .card{
         top: 60px;
         border: 4px solid gray;
         position: absolute;
         box-shadow: 5px 5px 15px 5px #473e3e;
+        border-radius: 10% 6%;
         display: flex;
-        flex-direction: column ;
-        border-radius: 40px 14px;
-        align-items: center;
+        justify-content: center;
+        align-items: start;
         &::before{
             position: absolute;
             width: fit-content;
@@ -47,11 +63,17 @@ body{
             border-radius: 20px 7px;
             padding:10px 5px;
         }
-        &>div{
-            width: 90%;
+        &__title{
+            margin-bottom: 20px;
+        }
+        .container{
+            width: 93%;
             border: 1px solid black;
-            max-height: fit-content;
-            
+            min-height: fit-content;
+            max-height: 99%;
+            display: flex;
+            flex-direction: column ;
+            justify-content: space-between;
         }
         div:not(:last-child){
             margin-bottom:8% ;
@@ -64,12 +86,8 @@ body{
 
 
 .personal_info{
-    background-color: #0a3d7b;
+
     position: relative;
-    &::before{
-        content: "About me";
-        background-color: #0a3d7b;
-    }
     &__id{
         display: block;
         text-align: center;
@@ -77,13 +95,12 @@ body{
         width: 100%;
         &__image{
             width: 97%;
+            object-fit: contain;
         }
         &__text{
             width:100%;
             display: block;
             font-family: monospace;
-
-            padding: 4px 10px;
             span{
                 font-family: monospace;
                 color: #18aad7;
@@ -95,15 +112,9 @@ body{
     }
 }
 .contact{
-    background-color: green;
     position: relative;
-    &::before{
-        content: "Contacts";
-        background-color: green;
-    }
     &__text{
         font-family: monospace;
-        margin-bottom: 50px;
     }
     &__list{
         font-family: monospace;
@@ -114,25 +125,15 @@ body{
 }
 
 
-img {
-    object-fit: contain;
-}
-
 .projects{
-    background-color: rgb(61, 69, 61);
     position: relative;
-    &__title{
-        margin-bottom: 30px;
-        
+    &__title{  
     }
     &__filter{
         background-color: red;
-        margin-bottom: 20px;
         &__language{
             border: gray 2px solid;
-            padding: 4px 7px;
             border-radius: 6px;
-            margin-right: 40px;
         }
         &__Date{
             
@@ -143,7 +144,6 @@ img {
         text-align-last: start;
         width: 90%;
         .project{
-            margin-bottom: 5px;
             .item{
             }
             &__name{
@@ -153,14 +153,11 @@ img {
         }
     }
     .description{
-        position: absolute;
-        top:50%;
-        padding: 20px 5px;
         border-top: 2px solid gray;
-        width: 90%;
+      
         text-align: start;
         &__title{
-            margin-bottom: 10px;
+            font-weight: 500;
         }
         &__text{
             
@@ -168,14 +165,43 @@ img {
     }
 }
 .education{
-    background-color: gold;
+    .courses{
+        text-align: start;
+        margin: 0;
+        padding: 0;
+        .course{
+            width: 100%;
+            &__name{
 
+            }
+            &__by{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__date{
+            }
+        }
+        .course:not(:last-child){
+            margin-bottom: 3%;
+        }
+
+    }
 
 }
 
 .devops{
-    background-color: green;
-    align-items: start;
+    .cloud{
+        text-align: start;
+        &__title{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        &__description{
+            
+        }
+        &__subjects{
+        }
+    }
 }
 
 .cont{

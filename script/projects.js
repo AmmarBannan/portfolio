@@ -64,7 +64,7 @@ document.querySelector(".filter__language").addEventListener("change", (event) =
 });
 
 function details(desc,name){
-  document.querySelector(".description").innerHTML=`<h2 class="description__title">${name}</h2> <p class="description__text">${desc}</p>`
+  document.querySelector(".description").innerHTML=`<h3 class="description__title">${name}</h3> <p class="description__text">${desc}</p>`
 }
 
 // function showDesc(project){
