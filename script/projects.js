@@ -31,17 +31,14 @@ function dateUp( a, b ) {
 
 let changeLanguage=()=>{
     let language=document.getElementsByClassName("filter__language");
-    console.log(language)
 }
 let selectlang=(prop,propVal)=>projects.filter(val=>val[prop].includes(propVal))
-
-console.log(document.querySelector(".filter__language").value)
 
 let projectView=(list)=>"<tr><th>name</th><th>data</th><th>favorite</th></tr>"+list.map((val,index)=>{
   let desc=val.description
   let name=val.name
     return `<tr class="project" value="${val.name}">
-        <td class="item project__name"><h3 class="projec-name" onclick="details('${desc}','${name}')" > ${val.name}</h3></td>
+        <td class="item project__name"><p class="projec-name" onclick="details('${desc}','${name}')" > ${val.name}</p></td>
         <td class="item project__Plateform">${val.plateform}</td>
         <td class="item project__date">${val.date/100}</td>
     </tr>`}
@@ -76,3 +73,4 @@ function details(desc,name){
 // document.querySelector(".project__name").addEventListener("click",(project)=>{
 //   console.log(project.target.value)
 // })
+

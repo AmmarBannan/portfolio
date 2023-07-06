@@ -3,13 +3,14 @@
      
 h1,h2,h3,h4,h5,h6,p { margin: 0;}
 html { box-sizing: border-box;}
+ul{padding: 0;}
 *,*::after,*::before { box-sizing: inherit;}
 img { display: block; max-width: 100%; height: auto;object-fit: cover;}
 address { font-style: normal;}
 .link { text-decoration: none; color: inherit; cursor: pointer;height: fit-content;}
 .list { list-style: none; padding: 0; margin: 0;} 
 a{ text-decoration: none;}
-li{list-style: none;}
+
 
 :root{
     --radius:90vh;
@@ -17,32 +18,70 @@ li{list-style: none;}
 }
 body{
     background-color: rgb(48, 46, 46);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
 
 }
 .link { text-decoration: none; color: inherit; cursor: pointer;height: fit-content;}
 .list { list-style: none; padding: 0; margin: 0;} 
 
+.nav-bar{
+    height:99%;
+    width: 8%;
+    background-color: #18aad7;
+    display: flex;
+    flex-direction: column;
+    border: 1 gray solid;
+    border-radius: 7px;
+    padding:3px;
+    .nav{
+        display: flex;
+        height: 60%;
+        justify-content: space-around;
+        flex-direction: column;
+        border: solid 2px gray;
+        &__item{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            height:100px;
+            padding: 20px 4px;
+            cursor: pointer;
+            &:hover{
+                border: 2px solid gray;
+                border-radius: 8px;
+                background-color: rgb(116, 112, 112,.4);
+            }
+        }
+        .selected{
+            background-color: gray;
+            
+        }
+    }
+    
+}
 
-#card0{
-    background-color: #0a3d7b;
- }
-#card1{
-    background-color: green;
-}
-#card2{
-    background-color: rgb(61, 69, 61);
-}
-#card3{
-    background-color: gold;
-}
-#card4{
-    background-color: rgb(52, 196, 12);
-}
+#card0{background-color: rgb(8, 8, 220,.9);}
+#card1{background-color: rgb(5, 161, 5,.9);}
+#card2{background-color: rgb(61, 69, 61,.9);}
+#card3{background-color: rgb(238, 204, 6,.9);}
+#card4{background-color: rgb(52, 196, 12,.9);}
+#card5{background-color: rgb(131, 47, 211,.9);}
+#card6{background-color: rgb(199, 105, 22,.9);}
+#card7{background-color: rgb(87, 84, 84,.9);}
+#card8{background-color: rgba(7, 96, 174, 0.9);}
 .wrapper{
     text-align: center;
     display: flex;
+    height: 90%;
+    width: 92%;
+    align-items: center;
+    justify-content: center;
+
+    h1,h2,h3,h4,h5,h6,p {transition:font-size 1s;}
+    p,li,figcaption{transition:font-size 1s;}
     .card{
-        top: 60px;
         border: 4px solid gray;
         position: absolute;
         box-shadow: 5px 5px 15px 5px #473e3e;
@@ -50,6 +89,12 @@ body{
         display: flex;
         justify-content: center;
         align-items: start;
+        transition:top 2s, left 3s , width 1s, height 1s, zIndex 4s;
+        
+        &:hover{
+            background-color: red;
+        }
+
         &::before{
             position: absolute;
             width: fit-content;
@@ -64,7 +109,6 @@ body{
             padding:10px 5px;
         }
         &__title{
-            margin-bottom: 20px;
         }
         .container{
             width: 93%;
@@ -74,12 +118,26 @@ body{
             display: flex;
             flex-direction: column ;
             justify-content: space-between;
+            ul{
+                width: 100%;
+                
+                li{
+                    text-align: start;
+                    float: right;
+                    width: 93%;
+                }
+            }
+            
         }
         div:not(:last-child){
-            margin-bottom:8% ;
         }
         h1{
-            font-size: 5%
+        }
+        &__title{
+            text-align: center;
+        }
+        &__description{
+            text-align: start;
         }
     }
 }
@@ -91,7 +149,6 @@ body{
     &__id{
         display: block;
         text-align: center;
-        margin-bottom: 40px;
         width: 100%;
         &__image{
             width: 97%;
@@ -127,8 +184,7 @@ body{
 
 .projects{
     position: relative;
-    &__title{  
-    }
+    max-height: 100%;
     &__filter{
         background-color: red;
         &__language{
@@ -140,7 +196,6 @@ body{
         }
     }
     .projectsList{
-     
         text-align-last: start;
         width: 90%;
         .project{
@@ -154,13 +209,14 @@ body{
     }
     .description{
         border-top: 2px solid gray;
-      
+        height: 40%;
         text-align: start;
         &__title{
             font-weight: 500;
+            transition:font-size 0s;
         }
         &__text{
-            
+
         }
     }
 }
@@ -182,7 +238,6 @@ body{
             }
         }
         .course:not(:last-child){
-            margin-bottom: 3%;
         }
 
     }
@@ -210,9 +265,44 @@ body{
 
     background-color: red;
     .primary{
-        font-size: 80vm;
     }
     .test{
-        font-size:50vm;
+
+    }
+}
+
+.certifications{
+    .certifications-list{
+        text-align: start;
+    }
+    
+}
+.skills{
+    .skill-list{
+        text-align: start;
+    }
+    
+}
+
+.works{ 
+    .work-list{
+        text-align: start;
+        padding-left: 0;
+        .work{
+
+        }
+    }
+}
+
+.feedback{
+    .letter{
+        width: 100%;
+        #message{
+            transition: width 2s;
+            background-color: transparent;
+            width: 100%;
+        }
+       
+        
     }
 }
