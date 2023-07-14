@@ -9,296 +9,307 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <nav class="nav-bar">
-        <ul class="list nav">
-            <li class="nav__item button0" onclick="selection(0)">About Me</li>
-            <li class="nav__item button1" onclick="selection(1)">Education</li>
-            <li class="nav__item button2" onclick="selection(2)">Technical Skills</li>
-            <li class="nav__item button3" onclick="selection(3)">Projects</li>
-            <li class="nav__item button4" onclick="selection(4)">Work Experience</li>
-            <li class="nav__item button5" onclick="selection(5)">Skills</li>
-            <li class="nav__item button6" onclick="selection(6)">Contact</li>
-            <li class="nav__item button7" onclick="selection(7)">Certification</li>
-            <li class="nav__item button8" onclick="selection(8)">feedback</li>
-            
-        </ul>
-        <button class="message">Send me a massage</button>
-    </nav>
-    <ul class="wrapper">
-        <!-- ########################################## -->
-        <!-- ###########____ABOUT_ME______########### -->
-        <li class="card " id="card0" onclick="selection(0)" >
-            <div class="container personal_info ">
-                <div class="personal_info__id">
-                    <h2 class="name">Ammar Bannan</h2>
-                    <img class="personal_info__id__image" src="./static/ammar.png" alt="">
-                    <h3 class="personal_info__id__text">
-                    Hello, I'm<span> Ammar Bannan</span><br>
-                    A <span class="entitle">full stack</span> and <span class="entitle">DevOps</span><br>
-                    </h3>
-                </div>
-                <div class="extra">
-                    <h4>Things to know about me:</h4>
-                    <p>always looking to improve my skills technical or socially, creativity on the top of my feature</p>
-                </div>
+    <div class="wrapper">
+        <nav class="nav-bar">
+            <div>
+                <h1 class="logo">
+                    Ammar <br> <span class="sername">Bannan</span> 
+                </h1>
             </div>
-        </li>
-        <!-- ########################################## -->
-        <!-- ###########____EDUCATION______########### -->
-        <li class="card" id="card1" onclick="selection(1)" >
-            <div class="container education">
-                <h2 class="card__title">Education</h2>
-                <ul class="courses">
-                    <li class="course">
-                        <P class="course__name">AWS DevOps</P>
-                        <p class="course__by">Guru Cloud <time class="course__date">2022-2023</time> </p>
-                        <ul>
-                            <li>Networking</li>
-                            <li>Bash, commands</li>
-                            <li>AWS services</li>
-                        </ul>
-                    </li>
-                    <li class="course">
-                        <P class="course__name">Front End react</P>
-                        <p class="course__by">Guru Cloud <time class="course__date">7/2022-11/2022</time></p>
-                        <ul>
-                            <li>html,Css</li>
-                            <li>JavaScript:advanced level in JavaScript and javascript web service</li>
-                            <li>React: intermediate level of react</li>
-                        </ul>
-                    </li>
-                    <li class="course">
-                        <P class="course__name">GCP Devops</P>
-                        <p class="course__by">Guru Cloud <time class="course__date">2/2022-4/2022</time></p>
-                        <ul>
-                            <li>linux</li>
-                            <li>Networking</li>
-                            <li>GCP services</li>
-                        </ul>
-                    </li>
-                    <li class="course">
-                        <P class="course__name">Java Design Pattern JHON PRYCE</P>
-                        <p class="course__by">Guru Cloud <time class="course__date">5/2021-8/2021</time></p>
-                        <ul>
-                            <li>Java</li>
-                            <li>Java utilize tools</li>
-                        </ul>
-                    </li>
-                    <li class="course">
-                        <P class="course__name">full stack developer</P>
-                        <p class="course__by">Axsos Academy <time class="course__date">10/2020-1/2021</time></p>
-                        <ul>
-                            <li>html, jsp, css and jinja2</li>
-                            <li>python: django</li>
-                            <li>Java: spring</li>
-                            <li>javascript: MERN</li>
-                            <li>SQL: MySQL and MongoDB</li>
-                            <li>bash: amazon cloud</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <!-- ########################################## -->
-        <!-- ###########____DEVOPS______########### -->
-        <li class="card" id="card2" onclick="selection(2)" >
-            <div class="container devops">
-                <h3 class="card__title">DevOps</h3>
-                <div class="cloud aws">
-                    <h3 class="cloud__title">Devops AWS</h3>
-                    <p class="cloud__description">
-                        course is taking by <span>Guru Cloud</span> and under instruction of expressed AWS Devops employee,
-                        starting with lunix practicing and using bash commands,
-                        creating DNS server(Bind9),post server(postfix) with schedule post sending(cron),
-                        Enable HTTPS Protocol with Apache 2 on Ubuntu
-                    </p>
-                    
-                    <h4>AWS cloud content :</h4>
-                    <ul class="cloud__subjects">
-                        <li>Linux bash, bash script and ssh</li>
-                        <li>creating HTTPS apache server with domain name, DNS(Bind9) and mail server(postfix) repeatedly(cron) </li>
-                        <li>basic concept of networking.</li>
-                        <li>Amazon web server: VPC, subnet network, internet gateway, EC2, s3, ...</li>
-                    </ul>
-                </div>
-                <div class="cloud gcp">
-                    <h3 class="cloud__title">Devops GCP</h3>
-                    <p class="cloud__description">took an intensive course of 4 months with final GCP project
-                    course topics</p>
-
-                    <h4>GCP cloud content :</h4>
-                    <ul class="cloud__subjects"> 
-                        <li>Linux bash, VMware</li>
-                        <li>Networking: DHCP, STP, Routing (OSPF, Static, Default),
-                            ACL, VLAN, NAT&PAT, Sub-netting, switch and routing
-                            configuration.</li>
-                        <li>Google Cloud Platform: Computing, SQL, Serverless, Run
-                            Engine, App Engine, Cloud Function, Trigger, VPC cloud
-                            network, Deploy, GCR, Docker, Kubernetes.</li>
-                    </ul>
-                </div>
-            </div>
-         </li>
-        <!-- ########################################## -->
-        <!-- ###########____PROJECTS______########### -->
-        <li class="card " id="card3" onclick="selection(3)">
-            <div class="container projects">
-                <h3 class="card__title">
-                    Here is a list of my project:
-                </h3>
-                <div class="projects__filter">
-                    <select class="filter__language" name="filter">
-                        <option disabled selected value> -- select a language -- </option>
-                        <option value="">All</option>
-                        <option value="Java">Java</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="Python">Python</option>
-                        <option value="MySQL">MySQL</option>
-                        <option value="Bash">Bash</option>
-                        <option value="HTML">HTML</option>
-                        <option value="CSS">CSS</option>
-                        <option value="NodeJS">NodeJS</option>
-                        <option value="Express">Express</option>
-                        <option value="MongoDB">MongoDB</option>
-                    </select>
-                    <input class="filter__Date" type="button" value="Date">
-                </div>
-                <table class="projectsList">
-                </table>
-                <div class="description"></div>
-            </div>
-        </li>
-        
-        <!-- ########################################## -->
-        <!-- ###########____WORKS______########### -->
-        <li class="card" id="card4" onclick="selection(4)" >
-            <div class="container works">
-                <h3 class="card__title">Work Experience</h3>
-                <p class="card__description">after graduation 5 years ago, I had changed several jobs types where I was able to gain skills either soft or technicians</p>
-                <ul class="work-list">
-                    <p>and here are a list of jobs I assumed is good to be mentioned:</p>
-                    <li class="work">
-                        <h3 class="work__title">Maintenance worker</h3>
-                        <p class="work__describtion">
-                            after graduation as electrical engineer I was thirsty gain experience in electronic, so I started to work in workshop maintaining electric building tools such as:Cordless Drill,Electric Demolition Jack Hammer, Side Grinder...etc, adding to that as part of my jobs refactoring a 3phase synchronize, 3 phase induction and 1 phase motor.
-                        </p>
-                        <ul class="work__advantages">
-                            <li >soft skills: work under pressure, work responsibility, sell man experience, deal with costumer</li>
-                            <li >technical skills: Building three(Y,Δ) and single phase, fixing electrical device </li>
-                        </ul>
-                    </li>
-                    <li class="work">
-                        <h3 class="work__title">Maintenance worker</h3>
-                        <p class="work__describtion">
-                            after graduation as electrical engineer I was thirsty gain experience in electronic, so I started to work in workshop maintaining electric building tools such as:Cordless Drill,Electric Demolition Jack Hammer, Side Grinder...etc, adding to that as part of my jobs refactoring a 3phase synchronize, 3 phase induction and 1 phase motor.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </li>
-         <!-- ########################################## -->
-        <!-- ###########____SKILLS______########### -->
-        <li class="card" id="card5" onclick="selection(5)">
-            <div class="container skills">
-                <h3 class="card__title">Skills</h3>
-                <p class="card__description">I believe that skills and hobbies reflect the way of person thinking</p>
-                <ul class="skill-list">
-                    <li class="skill">
-                        <h3 class="skill__title">Art</h3>
-                        <p class="skill__describtion">
-                            since my childhood I used to draw and sculpt status, therefore I improved my skill and getting in using computer application,
-                            here are some of art applications that I learned to used:
-                            Zbrush, Sculptris, 3d Maya automation and blender.
-                            and some other programme use AI such as Stable Diffusion
-                        </p>
-                    </li>
-                    <li class="skill">
-                        <h3 class="skill__title">electronic</h3>
-                        <p class="skill__describtion">
-                            I was involved in electric stuff since I was young, and that motivated me to acquire electric certification which require to take many hour of electronic and chip designing
-                        </p>
-                    </li>
-                </ul>
+            <ul class="list nav">
+                <li class="nav__item button0" onclick="selection(0)">About Me</li>
+                <li class="nav__item button1" onclick="selection(1)">Education</li>
+                <li class="nav__item button2" onclick="selection(2)">Technical Skills</li>
+                <li class="nav__item button3" onclick="selection(3)">Projects</li>
+                <li class="nav__item button4" onclick="selection(4)">Work Experience</li>
+                <li class="nav__item button5" onclick="selection(5)">Skills</li>
+                <li class="nav__item button6" onclick="selection(6)">Contact</li>
+                <li class="nav__item button7" onclick="selection(7)">Certification</li>
+                <li class="nav__item button8" onclick="selection(8)">feedback</li>
                 
-
-
-            </div>
-        </li>
-        
-         <!-- ########################################## -->
-        <!-- ###########____CONTACTS______########### -->
-        <li class="card " id="card6" onclick="selection(6)" >
-            <div class="container contact">
-                <h3 class="card__title">
-                    contacts
-                </h3>
-                <div>
-                    <p class="contact__text">
-                        I will be very happy if you contact me by any of the links below or at least a leave a comment or a feedback will be nice
-                    </p>
+            </ul>
+        </nav>
+        <ul class="dashboard">
+            <!-- ########################################## -->
+            <!-- ###########____ABOUT_ME______########### -->
+            <li class="card " id="card0" onclick="selection(0)" >
+                <div class="container personal_info ">
+                    <div class="personal_info__id">
+                        <h2 class="name">Ammar Bannan</h2>
+                        <img class="personal_info__id__image" src="./static/ammar.png" alt="">
+                        <h3 class="personal_info__id__text">
+                        Hello, I'm<span> Ammar Bannan</span><br>
+                        A <span class="entitle">full stack</span> and <span class="entitle">DevOps</span><br>
+                        </h3>
+                    </div>
+                    <div class="extra">
+                        <h4>Things to know about me:</h4>
+                        <p>always looking to improve my skills technical or socially, creativity on the top of my feature</p>
+                    </div>
                 </div>
-                <div>
-                    <ul class="contact__list list">
-                        <li class="contact__List___item">Gmail :<a class="link" href="">ammarabannan@gmail.com</a></li>
-                        <li class="contact__List___item">Phone# :<a class="link" href="">+972 58-424-2107</a></li>
-                        <li class="contact__List___item">GitHub :<a class="link" href="">AmmarBannan</a></li>
-                        <li class="contact__List___item">LinkedIn:<a class="link" href="">AmmarBannan</a></li>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____EDUCATION______########### -->
+            <li class="card" id="card1" onclick="selection(1)" >
+                <div class="container education">
+                    <h2 class="card__title">Education</h2>
+                    <ul class="courses">
+                        <li class="course">
+                            <P class="course__name">AWS DevOps</P>
+                            <p class="course__by">Guru Cloud <time class="course__date">2022-2023</time> </p>
+                            <ul>
+                                <li>Networking</li>
+                                <li>Bash, commands</li>
+                                <li>AWS services</li>
+                            </ul>
+                        </li>
+                        <li class="course">
+                            <P class="course__name">Front End react</P>
+                            <p class="course__by">GOit Sigma-Labs <time class="course__date">7/2022-11/2022</time></p>
+                            <ul>
+                                <li>html,Css</li>
+                                <li>JavaScript:advanced level in JavaScript and javascript web service</li>
+                                <li>React: intermediate level of react</li>
+                            </ul>
+                        </li>
+                        <li class="course">
+                            <P class="course__name">GCP Devops</P>
+                            <p class="course__by">Guru Cloud <time class="course__date">2/2022-4/2022</time></p>
+                            <ul>
+                                <li>linux</li>
+                                <li>Networking</li>
+                                <li>GCP services</li>
+                            </ul>
+                        </li>
+                        <li class="course">
+                            <P class="course__name">Java Design Pattern JHON PRYCE</P>
+                            <p class="course__by">Guru Cloud <time class="course__date">5/2021-8/2021</time></p>
+                            <ul>
+                                <li>Java</li>
+                                <li>Java utilize tools</li>
+                            </ul>
+                        </li>
+                        <li class="course">
+                            <P class="course__name">full stack developer</P>
+                            <p class="course__by">Axsos Academy <time class="course__date">10/2020-1/2021</time></p>
+                            <ul>
+                                <li>html, jsp, css and jinja2</li>
+                                <li>python: django</li>
+                                <li>Java: spring</li>
+                                <li>javascript: MERN</li>
+                                <li>SQL: MySQL and MongoDB</li>
+                                <li>bash: amazon cloud</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </li>
-        <!-- ########################################## -->
-        <!-- ###########____CERTIFICATIONS_____########### -->
-        <li class="card" id="card7" onclick="selection(7)" >
-            <div class="container certifications">
-                <h3 class="card__title">certification</h3>
-                <p class="card__description">you can have a look in my certification:</p>
-                <ul class="certifications-list">
-                    <li >
-                        <figure class="certification">
-                            <figcaption class="certification__title">electrical engineering Certification</figcaption>
-                            <img src="" alt="">
-                        </figure>
-                    </li>
-                    <li >
-                        <figure class="certification">
-                            <figcaption class="certification__title">Full stack course</figcaption>
-                            <img src="" alt="">
-                        </figure>
-                    </li>
-                    <li >
-                        <figure class="certification">
-                            <figcaption class="certification__title">Java Design Pattern course</figcaption>
-                            <img src="" alt="">
-                        </figure>
-                    </li>
-                    <li >
-                        <figure class="certification">
-                            <figcaption class="certification__title">Google Cloud platform course</figcaption>
-                            <img src="" alt="">
-                        </figure>
-                    </li>
-                    <li >
-                        <figure class="certification">
-                            <figcaption class="certification__title">Front-End React course</figcaption>
-                            <img class="certification__title" src="" alt="">
-                        </figure>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <!-- ########################################## -->
-        <!-- ###########____FEEDBACK______########### -->
-        <li class="card" id="card8" onclick="selection(8)" >
-            <div class="container feedback">
-                <h3 class="card__title">feedback</h3>
-                <p class="card__description">I will be happy if you have anything to comment about or an opinion</p>
-                <div class="letter">
-                    <textarea name="message" id="message"  rows="6"  placeholder="Write your comment ..."></textarea>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____DEVOPS______########### -->
+            <li class="card" id="card2" onclick="selection(2)" >
+                <div class="container devops">
+                    <h3 class="card__title">DevOps</h3>
+                    <div class="cloud aws">
+                        <h3 class="cloud__title">Devops AWS</h3>
+                        <p class="cloud__description">
+                            course is taking by <span>Guru Cloud</span> and under instruction of expressed AWS Devops employee,
+                            starting with lunix practicing and using bash commands,
+                            creating DNS server(Bind9),post server(postfix) with schedule post sending(cron),
+                            Enable HTTPS Protocol with Apache 2 on Ubuntu
+                        </p>
+                        
+                        <h4>AWS cloud content :</h4>
+                        <ul class="cloud__subjects">
+                            <li>Linux bash, bash script and ssh</li>
+                            <li>creating HTTPS apache server with domain name, DNS(Bind9) and mail server(postfix) repeatedly(cron) </li>
+                            <li>basic concept of networking.</li>
+                            <li>Amazon web server: VPC, subnet network, internet gateway, EC2, s3, ...</li>
+                        </ul>
+                    </div>
+                    <div class="cloud gcp">
+                        <h3 class="cloud__title">Devops GCP</h3>
+                        <p class="cloud__description">took an intensive course of 4 months with final GCP project
+                        course topics</p>
+
+                        <h4>GCP cloud content :</h4>
+                        <ul class="cloud__subjects"> 
+                            <li>Linux bash, VMware</li>
+                            <li>Networking: DHCP, STP, Routing (OSPF, Static, Default),
+                                ACL, VLAN, NAT&PAT, Sub-netting, switch and routing
+                                configuration.</li>
+                            <li>Google Cloud Platform: Computing, SQL, Serverless, Run
+                                Engine, App Engine, Cloud Function, Trigger, VPC cloud
+                                network, Deploy, GCR, Docker, Kubernetes.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____PROJECTS______########### -->
+            <li class="card " id="card3" onclick="selection(3)">
+                <div class="container projects">
+                    <h3 class="card__title">
+                        Here is a list of my project:
+                    </h3>
+                    <div class="projects__filter">
+                        <select class="filter__language" name="filter">
+                            <option disabled selected value> -- select a language -- </option>
+                            <option value="">All</option>
+                            <option value="Java">Java</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="MySQL">MySQL</option>
+                            <option value="Bash">Bash</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="NodeJS">NodeJS</option>
+                            <option value="Express">Express</option>
+                            <option value="MongoDB">MongoDB</option>
+                        </select>
+                        <input class="filter__Date" type="button" value="Date">
+                    </div>
+                    <table class="projectsList">
+                    </table>
+                    <div class="description"></div>
+                </div>
+            </li>
+            
+            <!-- ########################################## -->
+            <!-- ###########____WORKS______########### -->
+            <li class="card" id="card4" onclick="selection(4)" >
+                <div class="container works">
+                    <h3 class="card__title">Work Experience</h3>
+                    <p class="card__description">after graduation 5 years ago, I had changed several jobs types where I was able to gain skills either soft or technicians</p>
+                    <ul class="work-list">
+                        <p>and here are a list of jobs I assumed is good to be mentioned:</p>
+                        <li class="work">
+                            <h3 class="work__title">Maintenance worker</h3>
+                            <p class="work__describtion">
+                                after graduation as electrical engineer I was thirsty gain experience in electronic, so I started to work in workshop maintaining electric building tools such as:Cordless Drill,Electric Demolition Jack Hammer, Side Grinder...etc, adding to that as part of my jobs refactoring a 3phase synchronize, 3 phase induction and 1 phase motor.
+                            </p>
+                            <ul class="work__advantages">
+                                <li >soft skills: work under pressure, work responsibility, sell man experience, deal with costumer</li>
+                                <li >technical skills: refactoring three(Y,Δ) and single phase, fixing electrical device </li>
+                            </ul>
+                        </li>
+                        <li class="work">
+                            <h3 class="work__title">electric worker</h3>
+                            <p class="work__describtion">
+                                installing and maintaining electrical and communication systems in building, work with a team
+                                <ul class="work__advantages">
+                                    <li >soft skills: work with a team</li>
+                                    <li >technical skills: electrical expansion.</li>
+                                </ul>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____SKILLS______########### -->
+            <li class="card" id="card5" onclick="selection(5)">
+                <div class="container skills">
+                    <h3 class="card__title">Skills</h3>
+                    <p class="card__description">I believe that skills and hobbies reflect the way of person thinking</p>
+                    <ul class="skill-list">
+                        <li class="skill">
+                            <h3 class="skill__title">Art</h3>
+                            <p class="skill__describtion">
+                                since my childhood I used to draw and sculpt status, therefore I improved my skill and getting in using computer application,
+                                here are some of art applications that I learned to used:
+                                Zbrush, Sculptris, 3d Maya automation and blender.
+                                and some other programme use AI such as Stable Diffusion
+                            </p>
+                        </li>
+                        <li class="skill">
+                            <h3 class="skill__title">electronic</h3>
+                            <p class="skill__describtion">
+                                I was involved in electric stuff since I was young, and that motivated me to acquire electric certification which require to take many hour of electronic and chip designing
+                            </p>
+                        </li>
+                    </ul>
+                    
+
+
+                </div>
+            </li>
+            
+            <!-- ########################################## -->
+            <!-- ###########____CONTACTS______########### -->
+            <li class="card " id="card6" onclick="selection(6)" >
+                <div class="container contact">
+                    <h3 class="card__title">
+                        contacts
+                    </h3>
+                    <div>
+                        <p class="contact__text">
+                            I will be very happy if you contact me by any of the links below or at least a leave a comment or a feedback will be nice
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="contact__list list">
+                            <li class="contact__List___item">Gmail :<a class="link" href="">ammarabannan@gmail.com</a></li>
+                            <li class="contact__List___item">Phone# :<a class="link" href="">+972 58-424-2107</a></li>
+                            <li class="contact__List___item">GitHub :<a class="link" href="">AmmarBannan</a></li>
+                            <li class="contact__List___item">LinkedIn:<a class="link" href="">AmmarBannan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____CERTIFICATIONS_____########### -->
+            <li class="card" id="card7" onclick="selection(7)" >
+                <div class="container certifications">
+                    <h3 class="card__title">certification</h3>
+                    <p class="card__description">you can have a look in my certification:</p>
+                    <ul class="certifications-list">
+                        <li >
+                            <figure class="certification">
+                                <figcaption class="certification__title">electrical engineering Certification</figcaption>
+                                <img src="" alt="">
+                            </figure>
+                        </li>
+                        <li >
+                            <figure class="certification">
+                                <figcaption class="certification__title">Full stack course</figcaption>
+                                <img src="" alt="">
+                            </figure>
+                        </li>
+                        <li >
+                            <figure class="certification">
+                                <figcaption class="certification__title">Java Design Pattern course</figcaption>
+                                <img src="" alt="">
+                            </figure>
+                        </li>
+                        <li >
+                            <figure class="certification">
+                                <figcaption class="certification__title">Google Cloud platform course</figcaption>
+                                <img src="" alt="">
+                            </figure>
+                        </li>
+                        <li >
+                            <figure class="certification">
+                                <figcaption class="certification__title">Front-End React course</figcaption>
+                                <img class="certification__title" src="" alt="">
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- ########################################## -->
+            <!-- ###########____FEEDBACK______########### -->
+            <li class="card" id="card8" onclick="selection(8)" >
+                <div class="container feedback">
+                    <h3 class="card__title">feedback</h3>
+                    <p class="card__description">I will be happy if you have anything to comment about or an opinion</p>
+                    <div class="letter">
+                        <textarea name="message" id="message"  rows="6"  placeholder="Write your comment ..."></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     <script  src="./Script/cards.js"></script>
     <script  src="./Script/projects.js"></script>
     <!-- <script type="text/javascript" src="./script/vanilla-tilt.js"></script>

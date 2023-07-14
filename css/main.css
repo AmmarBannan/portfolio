@@ -51,9 +51,13 @@ a {
 
 body {
   background-color: rgb(48, 46, 46);
-  height: 100vh;
+  height: 97vh;
   display: flex;
   justify-content: space-between;
+}
+
+.wrapper {
+  height: 97vh;
 }
 
 .link {
@@ -71,37 +75,48 @@ body {
 }
 
 .nav-bar {
-  height: 99%;
-  width: 8%;
+  height: 99vh;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   background-color: #18aad7;
   display: flex;
   flex-direction: column;
   border: 1 gray solid;
+  border: 2px solid black;
   border-radius: 7px;
-  padding: 3px;
+  padding: 15px 5px;
+  background: rgba(127, 138, 142, 0.7607843137);
+}
+.nav-bar .logo {
+  background-color: gra;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(95, 98, 110);
+  margin-bottom: 10%;
+}
+.nav-bar .logo .sername {
+  padding-left: 40%;
+  color: rgb(86, 67, 67);
 }
 .nav-bar .nav {
   display: flex;
-  height: 60%;
-  justify-content: space-around;
   flex-direction: column;
-  border: solid 2px gray;
+  position: sticky;
 }
 .nav-bar .nav__item {
   text-align: center;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: 600;
-  height: 100px;
-  padding: 20px 4px;
+  padding: 10px 4px;
   cursor: pointer;
 }
 .nav-bar .nav__item:hover {
-  border: 2px solid gray;
   border-radius: 8px;
   background-color: rgba(116, 112, 112, 0.4);
 }
 .nav-bar .nav .selected {
-  background-color: gray;
+  background-color: rgb(1, 1, 1);
+  color: #2e0ecb;
 }
 
 #card0 {
@@ -140,34 +155,33 @@ body {
   background-color: rgba(7, 96, 174, 0.9);
 }
 
-.wrapper {
-  text-align: center;
+.dashboard {
   display: flex;
-  height: 90%;
   width: 92%;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6, .wrapper p {
-  transition: font-size 1s;
-}
-.wrapper p, .wrapper li, .wrapper figcaption {
-  transition: font-size 1s;
-}
-.wrapper .card {
-  border: 4px solid gray;
+.dashboard .card {
+  border: 5px solid gray;
   position: absolute;
-  box-shadow: 5px 5px 15px 5px #473e3e;
-  border-radius: 10% 6%;
+  box-shadow: 9px 9px 1px 3px gray, 9px 9px 5px 3px #000000;
+  border-radius: 7%;
   display: flex;
   justify-content: center;
   align-items: start;
-  transition: top 2s, left 3s, width 1s, height 1s, zIndex 4s;
+  transition: top 2s, left 2s, width 1s, height 1s, zIndex 4s;
 }
-.wrapper .card:hover {
+.dashboard .card h1, .dashboard .card h2, .dashboard .card h3, .dashboard .card h4, .dashboard .card h5, .dashboard .card h6, .dashboard .card p {
+  transition: font-size 1s;
+}
+.dashboard .card p, .dashboard .card li, .dashboard .card figcaption {
+  transition: font-size 1s;
+}
+.dashboard .card:hover {
   background-color: red;
 }
-.wrapper .card::before {
+.dashboard .card::before {
   position: absolute;
   width: -moz-fit-content;
   width: fit-content;
@@ -181,7 +195,7 @@ body {
   border-radius: 20px 7px;
   padding: 10px 5px;
 }
-.wrapper .card .container {
+.dashboard .card .container {
   width: 93%;
   border: 1px solid black;
   min-height: -moz-fit-content;
@@ -191,18 +205,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.wrapper .card .container ul {
+.dashboard .card .container ul {
   width: 100%;
 }
-.wrapper .card .container ul li {
+.dashboard .card .container ul li {
   text-align: start;
   float: right;
   width: 93%;
 }
-.wrapper .card__title {
+.dashboard .card__title {
   text-align: center;
 }
-.wrapper .card__description {
+.dashboard .card__description {
   text-align: start;
 }
 
@@ -264,6 +278,7 @@ body {
   border-top: 2px solid gray;
   height: 40%;
   text-align: start;
+  transition: font-size 0s;
 }
 .projects .description__title {
   font-weight: 500;

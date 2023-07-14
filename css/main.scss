@@ -18,45 +18,58 @@ a{ text-decoration: none;}
 }
 body{
     background-color: rgb(48, 46, 46);
-    height: 100vh;
+    height: 97vh;
     display: flex;
     justify-content: space-between;
 
+}
+.wrapper{
+    height:97vh;
 }
 .link { text-decoration: none; color: inherit; cursor: pointer;height: fit-content;}
 .list { list-style: none; padding: 0; margin: 0;} 
 
 .nav-bar{
-    height:99%;
-    width: 8%;
+    height:99vh;
+    min-width: fit-content;
     background-color: #18aad7;
     display: flex;
     flex-direction: column;
     border: 1 gray solid;
+    border: 2px solid black;
     border-radius: 7px;
-    padding:3px;
+    padding:15px 5px;
+    background: #7f8a8ec2;
+
+    .logo{
+        background-color: gra;
+        width: fit-content;
+        color: rgb(95, 98, 110);
+        margin-bottom: 10%;
+        .sername{
+            padding-left: 40%;
+            color: rgb(86, 67, 67);
+        }
+    }
     .nav{
         display: flex;
-        height: 60%;
-        justify-content: space-around;
         flex-direction: column;
-        border: solid 2px gray;
+        position: sticky;
+        
         &__item{
             text-align: center;
-            font-size: 30px;
+            font-size: 16px;
             font-weight: 600;
-            height:100px;
-            padding: 20px 4px;
+            padding: 10px 4px;
             cursor: pointer;
             &:hover{
-                border: 2px solid gray;
                 border-radius: 8px;
                 background-color: rgb(116, 112, 112,.4);
             }
         }
         .selected{
-            background-color: gray;
-            
+            background-color: rgb(1, 1, 1);
+            color: #2e0ecb;
         }
     }
     
@@ -71,26 +84,23 @@ body{
 #card6{background-color: rgb(199, 105, 22,.9);}
 #card7{background-color: rgb(87, 84, 84,.9);}
 #card8{background-color: rgba(7, 96, 174, 0.9);}
-.wrapper{
-    text-align: center;
+.dashboard{
     display: flex;
-    height: 90%;
     width: 92%;
     align-items: center;
     justify-content: center;
-
-    h1,h2,h3,h4,h5,h6,p {transition:font-size 1s;}
-    p,li,figcaption{transition:font-size 1s;}
+    text-align: center;
     .card{
-        border: 4px solid gray;
+        border: 5px solid gray;
         position: absolute;
-        box-shadow: 5px 5px 15px 5px #473e3e;
-        border-radius: 10% 6%;
+        box-shadow: 9px 9px 1px 3px gray,9px 9px 5px 3px #000000;
+        border-radius: 7%;
         display: flex;
         justify-content: center;
         align-items: start;
-        transition:top 2s, left 3s , width 1s, height 1s, zIndex 4s;
-        
+        transition:top 2s, left 2s , width 1s, height 1s, zIndex 4s;
+        h1,h2,h3,h4,h5,h6,p {transition:font-size 1s;}
+        p,li,figcaption{transition:font-size 1s;}
         &:hover{
             background-color: red;
         }
@@ -211,6 +221,7 @@ body{
         border-top: 2px solid gray;
         height: 40%;
         text-align: start;
+        transition:font-size 0s;
         &__title{
             font-weight: 500;
             transition:font-size 0s;

@@ -13,9 +13,31 @@ let fontAdapter=()=>{
     }
 }
 
+let classSelected=()=>{
 
+    let current=cardHistory[cardHistory.length-2]
+    let next=cardHistory[cardHistory.length-1]
+    let timer = null;
+    let i=current;
+    let direction=Math.abs(next-current)<Math.abs(current-next)?1:-1
+    let speed=300/Math.abs(next-current)
+    
+    timer = setInterval(() => {
+
+        console.log("here:",Math.abs(i-direction)%9,"=>",i%9)
+        if(Math.abs(i)%9===next)clearInterval(timer);
+        document.querySelector(`.button${Math.abs(i-direction)%9}`).classList.remove("selected")
+        document.querySelector(`.button${i%9}`).classList.add("selected")
+        i+=direction
+    }, speed);
+    document.querySelector(`.button${Math.abs(next)}`).classList.remove("selected")
+
+    
+   
+}
 
 let edit=(cardId,i=0,len)=>{
+    
     let posI=Math.abs(i)
     let card=document.getElementsByClassName("card")[cardId]
     let img=document.querySelector(".card img")[cardId]
@@ -51,6 +73,8 @@ let edit=(cardId,i=0,len)=>{
     // card.style.transform= `scale(${1/(posI*2+1)})`;
     // card.style.fontSize=`${widthPX*.032}px`
     card.style.padding=`${widthPX*.06}px ${widthPX*.03}px`
+    let s=posI<4?i:0
+    card.style.boxShadow=`${i*4}px ${10-2*posI}px 2px 0px gray, ${i*2}px ${10-posI}px 2px 0px gray`
 
 }
 let sort=(j=0,len=9)=>{
@@ -62,6 +86,8 @@ let sort=(j=0,len=9)=>{
         if(left!==j)edit(left,i,len)
     }
     fontAdapter()
+    classSelected()
+
 }
 
 
@@ -70,52 +96,22 @@ let selection=(num=0)=>{
     if(cardHistory.length==8)cardHistory.shift();
     cardHistory.push(num%9)
     sort(num%9)
-    classSelected()
 }
 
 //\\\\\\\\\\\\\\\\\\\\\\CARDS/////////////////////\\
 document.body.addEventListener("keyup",(e)=>{
     let lastCard=cardHistory[cardHistory.length-1]
     switch(e.key){
-        case "ArrowRight":
+        case "ArrowRight":case "ArrowDown":
             selection(lastCard+1)
             break;
-        case "ArrowLeft":
+        case "ArrowLeft":case "ArrowUp":
             selection(lastCard-1)
             break;
     }
 })
 
 //\\\\\\\\\\\\\\\\\\\\\\BUTTONS/////////////////////\\
-document.body.addEventListener("keyup",(e)=>{
-    let lastCard=cardHistory[cardHistory.length-1]
-    switch(e.key){
-        case "ArrowDown":
-            selection(lastCard+1)
-            console.log("hereeee:",cardHistory)
-            break;
-        case "ArrowUp":
-            selection(lastCard-1)
-            break;
-    }
-})
 
-let classSelected=()=>{
 
-    let current=cardHistory[cardHistory.length-2]
-    let next=cardHistory[cardHistory.length-1]
-    console.log(`button${current}`)
-    let timer = null;
-    let i=current;
-    let direction=next>current?1:-1
-    let speed=300/Math.abs(next-current)
-    timer = setInterval(() => {
-        if(Math.abs(i)%9===next)clearInterval(timer);
-        document.querySelector(`.button${Math.abs(i-direction)%9}`).classList.remove("selected")
-        document.querySelector(`.button${i%9}`).classList.add("selected")
-        i+=direction
-    }, speed);
- 
-    
-   
-}
+
