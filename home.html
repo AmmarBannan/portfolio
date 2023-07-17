@@ -7,8 +7,10 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="./style/common.css"> -->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/loader.css">
 </head>
 <body>
+
     <div class="wrapper">
         <nav class="nav-bar">
             <div>
@@ -74,7 +76,7 @@
                         </li>
                         <li class="course">
                             <P class="course__name">GCP Devops</P>
-                            <p class="course__by">Guru Cloud <time class="course__date">2/2022-4/2022</time></p>
+                            <p class="course__by">Analyze,ITwork <time class="course__date">2/2022-4/2022</time></p>
                             <ul>
                                 <li>linux</li>
                                 <li>Networking</li>
@@ -83,7 +85,7 @@
                         </li>
                         <li class="course">
                             <P class="course__name">Java Design Pattern JHON PRYCE</P>
-                            <p class="course__by">Guru Cloud <time class="course__date">5/2021-8/2021</time></p>
+                            <p class="course__by">ITwork<time class="course__date">5/2021-8/2021</time></p>
                             <ul>
                                 <li>Java</li>
                                 <li>Java utilize tools</li>
@@ -310,8 +312,20 @@
             </li>
         </ul>
     </div>
+    <div class="preloader">
+        <div class="preloader__container">
+            <div class="loading-container">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-1a"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+            </div>
+            <h1>Loading&hellip;</h1>
+        </div>
+    </div>
     <script  src="./Script/cards.js"></script>
     <script  src="./Script/projects.js"></script>
+    <script src="./script/loader.js"></script>
     <!-- <script type="text/javascript" src="./script/vanilla-tilt.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".card"),{

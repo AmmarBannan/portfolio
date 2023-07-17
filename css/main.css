@@ -50,14 +50,18 @@ a {
 }
 
 body {
-  background-color: rgb(48, 46, 46);
+  background-image: url("../static/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 97vh;
   display: flex;
   justify-content: space-between;
+  transition: background-image 2s cubic-bezier(0.7, 1, 0.3, 1);
 }
 
 .wrapper {
   height: 97vh;
+  display: flex;
 }
 
 .link {
@@ -75,7 +79,8 @@ body {
 }
 
 .nav-bar {
-  height: 99vh;
+  float: left;
+  max-height: 100%;
   min-width: -moz-fit-content;
   min-width: fit-content;
   background-color: #18aad7;
@@ -83,25 +88,37 @@ body {
   flex-direction: column;
   border: 1 gray solid;
   border: 2px solid black;
-  border-radius: 7px;
-  padding: 15px 5px;
-  background: rgba(127, 138, 142, 0.7607843137);
+  border-radius: 8px 8px 14px 14px;
+  padding: 15px 5px 5px 5px;
+  background: rgba(81, 88, 91, 0.7607843137);
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  position: fixed;
 }
 .nav-bar .logo {
   background-color: gra;
   width: -moz-fit-content;
   width: fit-content;
-  color: rgb(95, 98, 110);
+  color: white;
   margin-bottom: 10%;
 }
 .nav-bar .logo .sername {
   padding-left: 40%;
-  color: rgb(86, 67, 67);
+  color: rgb(130, 104, 66);
 }
 .nav-bar .nav {
   display: flex;
   flex-direction: column;
   position: sticky;
+  border: 2px solid black;
+  border-radius: 14px;
+  background-color: rgba(163, 162, 162, 0.7);
+}
+.nav-bar .nav :last-child {
+  border-radius: 0 0 12px 12px;
+}
+.nav-bar .nav :first-child {
+  border-radius: 12px 12px 0 0;
 }
 .nav-bar .nav__item {
   text-align: center;
@@ -111,48 +128,48 @@ body {
   cursor: pointer;
 }
 .nav-bar .nav__item:hover {
-  border-radius: 8px;
-  background-color: rgba(116, 112, 112, 0.4);
+  background-color: rgba(116, 112, 115, 0.4);
 }
 .nav-bar .nav .selected {
-  background-color: rgb(1, 1, 1);
-  color: #2e0ecb;
+  background-color: rgb(130, 104, 66);
+  color: #ffffff;
+  border: solid black 1px;
 }
 
 #card0 {
-  background-color: rgba(8, 8, 220, 0.9);
+  background-color: rgba(142, 119, 88, 0.8);
 }
 
 #card1 {
-  background-color: rgba(5, 161, 5, 0.9);
+  background-color: rgba(115, 68, 45, 0.8);
 }
 
 #card2 {
-  background-color: rgba(61, 69, 61, 0.9);
+  background-color: rgba(3, 14, 129, 0.8);
 }
 
 #card3 {
-  background-color: rgba(238, 204, 6, 0.9);
+  background-color: rgba(169, 138, 105, 0.8);
 }
 
 #card4 {
-  background-color: rgba(52, 196, 12, 0.9);
+  background-color: rgba(24, 93, 123, 0.8);
 }
 
 #card5 {
-  background-color: rgba(131, 47, 211, 0.9);
+  background: linear-gradient(90deg, rgb(127, 131, 133) 0%, rgb(127, 131, 133) 46%, rgb(244, 106, 52) 62%, rgb(138, 164, 60) 84%, rgb(181, 74, 144) 98%);
 }
 
 #card6 {
-  background-color: rgba(199, 105, 22, 0.9);
+  background-color: rgba(0, 94, 183, 0.8);
 }
 
 #card7 {
-  background-color: rgba(87, 84, 84, 0.9);
+  background-color: rgba(87, 84, 84, 0.8);
 }
 
 #card8 {
-  background-color: rgba(7, 96, 174, 0.9);
+  background-color: rgba(135, 133, 129, 0.9);
 }
 
 .dashboard {
@@ -165,7 +182,6 @@ body {
 .dashboard .card {
   border: 5px solid gray;
   position: absolute;
-  box-shadow: 9px 9px 1px 3px gray, 9px 9px 5px 3px #000000;
   border-radius: 7%;
   display: flex;
   justify-content: center;
@@ -180,20 +196,6 @@ body {
 }
 .dashboard .card:hover {
   background-color: red;
-}
-.dashboard .card::before {
-  position: absolute;
-  width: -moz-fit-content;
-  width: fit-content;
-  top: -30px;
-  left: 10px;
-  border: gray solid 4px;
-  padding: 4px 8px;
-  color: gray;
-  font-weight: 800;
-  box-shadow: 5px 5px 15px 5px #2f2a2a;
-  border-radius: 20px 7px;
-  padding: 10px 5px;
 }
 .dashboard .card .container {
   width: 93%;
@@ -229,7 +231,7 @@ body {
   width: 100%;
 }
 .personal_info__id__image {
-  width: 97%;
+  width: 92%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -240,7 +242,7 @@ body {
 }
 .personal_info__id__text span {
   font-family: monospace;
-  color: #18aad7;
+  color: rgb(100, 50, 0);
 }
 .contact {
   position: relative;
@@ -258,9 +260,6 @@ body {
 .projects {
   position: relative;
   max-height: 100%;
-}
-.projects__filter {
-  background-color: red;
 }
 .projects__filter__language {
   border: gray 2px solid;
@@ -282,7 +281,7 @@ body {
 }
 .projects .description__title {
   font-weight: 500;
-  transition: font-size 0s;
+  transition: font-size 0s !important;
 }
 .education .courses {
   text-align: start;

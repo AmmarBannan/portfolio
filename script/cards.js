@@ -13,28 +13,7 @@ let fontAdapter=()=>{
     }
 }
 
-let classSelected=()=>{
 
-    let current=cardHistory[cardHistory.length-2]
-    let next=cardHistory[cardHistory.length-1]
-    let timer = null;
-    let i=current;
-    let direction=Math.abs(next-current)<Math.abs(current-next)?1:-1
-    let speed=300/Math.abs(next-current)
-    
-    timer = setInterval(() => {
-
-        console.log("here:",Math.abs(i-direction)%9,"=>",i%9)
-        if(Math.abs(i)%9===next)clearInterval(timer);
-        document.querySelector(`.button${Math.abs(i-direction)%9}`).classList.remove("selected")
-        document.querySelector(`.button${i%9}`).classList.add("selected")
-        i+=direction
-    }, speed);
-    document.querySelector(`.button${Math.abs(next)}`).classList.remove("selected")
-
-    
-   
-}
 
 let edit=(cardId,i=0,len)=>{
     
@@ -60,25 +39,61 @@ let edit=(cardId,i=0,len)=>{
 
     let factor=Math.pow(2,posI)
 
-    //position
     card.style.left=`calc(${shiftX}px)`;
 
     card.style.top=`calc(1% + ${shiftY}px)`;
-    //zindex
+
     card.style.zIndex=4-Math.abs(i)
-    //size
+
     card.style.height=`${height}px`
     card.style.width=`${width}%`
-    // card.style.transform=`scale(1/${factor})`
-    // card.style.transform= `scale(${1/(posI*2+1)})`;
-    // card.style.fontSize=`${widthPX*.032}px`
     card.style.padding=`${widthPX*.06}px ${widthPX*.03}px`
     let s=posI<4?i:0
-    card.style.boxShadow=`${i*4}px ${10-2*posI}px 2px 0px gray, ${i*2}px ${10-posI}px 2px 0px gray`
+    // card.style.boxShadow=`${i*4}px ${10-2*posI}px 2px 0px gray, ${i*2}px ${10-posI}px 2px 0px gray`
 
 }
+
+
+let classSelected=(cardHistory)=>{
+
+    let current=cardHistory.length>=2?cardHistory[cardHistory.length-2]:0
+    let next=cardHistory[cardHistory.length-1]
+    let timer = null;
+    let i=current
+    let direction
+    if(Math.abs(next-current)<6){
+        // if(Math.abs(9-(next-current))<5)
+        if(next>current)direction=1
+        else direction=-1
+    }
+    else{
+        if(next>current)direction=-1
+        else direction=1
+    }
+    if(next==current)direction=0
+    let speed=300/Math.abs(next-current)
+    timer=setInterval(()=>{
+        if(i==0 && direction==-1)i=9
+        if(i==9 && direction==1)i=0
+        if(document.querySelector(`.button${i%9}`).classList.contains("selected"))document.querySelector(`.button${i%9}`).classList.remove("selected")
+        i=(i+direction)%9
+        if(next==i)clearInterval(timer)
+        if(cardHistory.length==1){document.querySelector(`.button0`).classList.add("selected");clearInterval(timer)}
+        document.querySelector(`.button${i}`).classList.add("selected")
+    },speed)
+}
+
+function background(num){
+    console.log(num)
+    document.body.style.backgroundImage = `url(../static/${num}.jpg)`
+}
+
+
 let sort=(j=0,len=9)=>{
-    edit(j)
+
+    if(cardHistory.length==8)cardHistory.shift();
+    if(j%9!==cardHistory[cardHistory.length-1])cardHistory.push(j%9)
+    edit(cardHistory[cardHistory.length-1])
     for(let i=1;i!=Math.ceil((len+1)/2);i++){
         let right=i+j>len-1?i+j-len:j+i //check which one shifted to right
         let left=j-i<0?len-(i-j):j-i//check which one shifted to left
@@ -86,21 +101,22 @@ let sort=(j=0,len=9)=>{
         if(left!==j)edit(left,i,len)
     }
     fontAdapter()
-    classSelected()
+    classSelected(cardHistory)
+    background(cardHistory[cardHistory.length-1])
 
 }
 
 
 sort()
 let selection=(num=0)=>{
-    if(cardHistory.length==8)cardHistory.shift();
-    cardHistory.push(num%9)
     sort(num%9)
 }
+
 
 //\\\\\\\\\\\\\\\\\\\\\\CARDS/////////////////////\\
 document.body.addEventListener("keyup",(e)=>{
     let lastCard=cardHistory[cardHistory.length-1]
+    if(lastCard==0)lastCard=9
     switch(e.key){
         case "ArrowRight":case "ArrowDown":
             selection(lastCard+1)
@@ -112,6 +128,5 @@ document.body.addEventListener("keyup",(e)=>{
 })
 
 //\\\\\\\\\\\\\\\\\\\\\\BUTTONS/////////////////////\\
-
 
 
