@@ -1,6 +1,9 @@
 let loader= document.querySelector(".preloader")
 let loadingTime=null;
 
-window.addEventListener("load",()=>{
-    setTimeout(()=>loader.style.visibility="collapse", 500);
-})
+function loading(){
+    setTimeout(()=>loader.style.display="none", 500);
+}
+
+window.addEventListener("load",loading)
+

@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: space-between;
   transition: background-image 2s cubic-bezier(0.7, 1, 0.3, 1);
+  overflow: hidden;
 }
 
 .wrapper {
@@ -79,6 +80,7 @@ body {
 }
 
 .nav-bar {
+  z-index: 20;
   float: left;
   max-height: 100%;
   min-width: -moz-fit-content;
@@ -137,39 +139,42 @@ body {
 }
 
 #card0 {
-  background-color: rgba(142, 119, 88, 0.8);
+  background-color: rgba(142, 119, 88, 0.7);
 }
 
 #card1 {
-  background-color: rgba(115, 68, 45, 0.8);
+  background-color: rgba(115, 68, 45, 0.7);
 }
 
 #card2 {
-  background-color: rgba(3, 14, 129, 0.8);
+  background-color: rgba(3, 14, 129, 0.7);
+  color: rgb(219, 216, 216);
 }
 
 #card3 {
-  background-color: rgba(169, 138, 105, 0.8);
+  background-color: rgba(169, 138, 105, 0.7);
 }
 
 #card4 {
-  background-color: rgba(24, 93, 123, 0.8);
+  background-color: rgba(24, 93, 123, 0.7);
+  color: rgb(213, 212, 212);
 }
 
 #card5 {
-  background: linear-gradient(90deg, rgb(127, 131, 133) 0%, rgb(127, 131, 133) 46%, rgb(244, 106, 52) 62%, rgb(138, 164, 60) 84%, rgb(181, 74, 144) 98%);
+  background-color: rgba(127, 131, 133, 0.7);
 }
 
 #card6 {
-  background-color: rgba(0, 94, 183, 0.8);
+  background-color: rgba(0, 94, 183, 0.7);
+  color: rgb(227, 226, 226);
 }
 
 #card7 {
-  background-color: rgba(87, 84, 84, 0.8);
+  background-color: rgba(87, 84, 84, 0.7);
 }
 
 #card8 {
-  background-color: rgba(135, 133, 129, 0.9);
+  background-color: rgba(135, 133, 129, 0.7);
 }
 
 .dashboard {
@@ -180,16 +185,19 @@ body {
   text-align: center;
 }
 .dashboard .card {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   border: 5px solid gray;
   position: absolute;
   border-radius: 7%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  transition: top 2s, left 2s, width 1s, height 1s, zIndex 4s;
+  transition: top 2s cubic-bezier(0.7, 1, 0.3, 1), left 2s cubic-bezier(0.7, 1, 0.3, 1), width 1s cubic-bezier(0.7, 1, 0.3, 1), height 1s cubic-bezier(0.7, 1, 0.3, 1), zIndex 4s cubic-bezier(0.7, 1, 0.3, 1);
 }
 .dashboard .card h1, .dashboard .card h2, .dashboard .card h3, .dashboard .card h4, .dashboard .card h5, .dashboard .card h6, .dashboard .card p {
-  transition: font-size 1s;
+  transition: font-size 1s cubic-bezier(0.7, 1, 0.3, 1);
+  background-color: 1s cubic-bezier(0.9, 0.7, 0.3, 1);
 }
 .dashboard .card p, .dashboard .card li, .dashboard .card figcaption {
   transition: font-size 1s;
@@ -198,14 +206,11 @@ body {
   background-color: red;
 }
 .dashboard .card .container {
-  width: 93%;
+  max-width: 500px;
   border: 1px solid black;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  max-height: 99%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  transition: top 2s cubic-bezier(0.7, 1, 0.3, 1), left 2s cubic-bezier(0.7, 1, 0.3, 1), width 1s cubic-bezier(0.7, 1, 0.3, 1), height 1s cubic-bezier(0.7, 1, 0.3, 1), zIndex 4s cubic-bezier(0.7, 1, 0.3, 1);
 }
 .dashboard .card .container ul {
   width: 100%;
@@ -220,6 +225,17 @@ body {
 }
 .dashboard .card__description {
   text-align: start;
+}
+
+.more {
+  position: absolute;
+  bottom: 2%;
+  right: 6%;
+  cursor: pointer;
+}
+.more:hover {
+  color: white;
+  text-shadow: -6px 5px 16px white;
 }
 
 .personal_info {
@@ -326,4 +342,20 @@ body {
   transition: width 2s;
   background-color: transparent;
   width: 100%;
+}
+
+#extension {
+  width: 50%;
+  display: none;
+}
+
+.exit {
+  position: absolute;
+  top: 2%;
+  right: 6%;
+  cursor: pointer;
+}
+.exit:hover {
+  color: white;
+  text-shadow: -6px 5px 16px white;
 }/*# sourceMappingURL=main.css.map */
