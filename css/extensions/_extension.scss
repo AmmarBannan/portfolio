@@ -1,0 +1,27 @@
+#extension{
+    width: 50%;
+    display: none
+}
+
+.more{
+    position: absolute;
+    bottom: 2%;
+    right: 6%;
+    cursor: pointer;
+    &:hover{
+        color:white;
+        text-shadow: -6px 5px 16px white;
+    }
+}
+
+.exit{
+    position: absolute;
+    top: 2%;
+    right: 6%;
+    cursor: pointer;
+    &:hover{
+        color:white;
+        text-shadow: -6px 5px 16px white;
+    }
+}
+

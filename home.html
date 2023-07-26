@@ -7,8 +7,6 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="./style/common.css"> -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/loader.css">
-    <link rel="stylesheet" href="./css/chart.css">
 </head>
 <body>
 
@@ -52,12 +50,30 @@
                     </div>
                 </div>
                 <div id="extension" class="container personal_info">
-                    <div class="exit" onclick="close(0)">&#x58;</div>
+                    <div class="exit" onclick="expansion(0,false)">&#x58;</div>
                     <div class="charts">
                         <canvas id="language"></canvas>
                     </div>
+                    <div class="properties">
+                        <section class="strength pointes" tabIndex="1">
+                            <div class="cover"></div>
+                            <ul class="strPtn list ">
+                                <li class="strPtn__item"><p><h4>social:</h4> very active person, tend to make friends and peaceful environment, respect all Divine religions </p></li>
+                                <li class="strPtn__item"><p><h4>challenger:</h4> would love to work in challenging environment and competition </p></li>
+                                <li class="strPtn__item"><p><h4>creative:</h4> passing problems make me more <span>Creative</span> and enhance my way of thinking</p></li>
+                            </ul>
+                        </section>
+                        <section class="weakness pointes" tabIndex="2">
+                            <div class="cover"></div>
+                            <ul class="weakPtn list">
+                                <li class="weakPtn__item"><p><h4>stubborn:</h4> I cant pass problem without solution.</p></li>
+                                <li class="weakPtn__item"><p> </p></li>
+                                <li class="weakPtn__item"><p>creative:passing problems make me more <span>Creative</span> and enhance my way of thinking</p></li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
-                <div class="more" onClick="expand(0)">&#10137;</div>
+                <div class="more" onclick="expansion(0,true)">&#10137;</div>
             </li>
             <!-- ########################################## -->
             <!-- ###########____EDUCATION______########### -->

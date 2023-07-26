@@ -30,15 +30,20 @@ function expand(id){
 }
 
 let order="none"
-
-let expansion=(id)=>{
-    order=order=="flex"?"none":"flex"
-    document.querySelector(`#card${id} #extension`).style.display=order;
-    if(order=="none")document.querySelector(`#card${id}`).style.left=`calc(${shiftX}px)`;
+let lastExt=-1
+let expansion=(id,open)=>{
+    lastExt=id
+    order=open?"flex":"none"
+    let extension=document.querySelector(`#card${id} #extension`)
+    extension.style.display=order;
+    extension.style.height=document.querySelector(`#card${id} .container`).style.getPropertyValue("height")
+    extension.style.width=document.querySelector(`#card${id} .container`).style.getPropertyValue("width")
 }
 
+
+
 let edit=(cardId,i=0,len)=>{
-    
+
     let posI=Math.abs(i)
     let card=document.querySelector(`#card${cardId}`)
     let container=document.querySelector(`#card${cardId} .container`)
@@ -46,33 +51,26 @@ let edit=(cardId,i=0,len)=>{
     //width
     let width=30/Math.pow(posI+1,.8)
     let widthPX=width/110*document.body.clientWidth
-    // if(i==0){
-    //     width="40"
-    // }
+
     //height
     let height=.90*document.body.clientHeight/Math.pow(posI+1,.8)
-    // widthPX>550?700:1.538*widthPX
-    // let shift=500*Math.sign(i)*Math.pow(.8,Math.abs(2-posI))-i*i*5+700
+    if(height<1.5*widthPX||height>1.5*widthPX)height=widthPX*1.5
+
     let rotate=i==0?0:Math.sign(i)*(32*((posI*.8-Math.floor(posI/2.5))%2.1)/1.7+7)
-
-    let shiftX=document.body.clientWidth*(50-rotate)/100-widthPX/2
+    
+    let factorX=order!=="none"&&i==0?2:1
+    let shiftX=document.body.clientWidth*(50-rotate)/100-widthPX/2*factorX
     let shiftY=document.body.clientHeight*(50-posI*3)/100-height/2-25
-
-
+    if(shiftY<0)shiftY=0
 
     card.style.top=`calc(1% + ${shiftY}px)`;
     card.style.left=`calc(${shiftX}px)`;
 
     card.style.zIndex=4-Math.abs(i)
 
-    
-
     let EWidth=widthPX
-    if(expandWidth==cardId&&i==0){expansion(cardId);shiftX=document.body.clientWidth*(50-rotate)/100-widthPX}
-    else if(document.querySelector(`#card${cardId} #extension`)){document.querySelector(`#card${cardId} #extension`).style.display="none"}
   
     card.style.left=`calc(${shiftX}px)`;
-
     container.style.height=`${height}px`
     container.style.width=`${EWidth}px`
     
@@ -128,7 +126,9 @@ let sort=(j=0,len=9)=>{
         if(right!==j)edit(right,-i,len)
         if(left!==j)edit(left,i,len)
     }
-   
+
+
+ 
     const card=document.getElementById(`card${j}`)
     const cardsLoaded =new Promise(function (resolve, reject) {
         if (card!=="null"  && card) {
@@ -152,6 +152,13 @@ window.addEventListener("resize",()=>{sort()});
 
 sort()
 function selection(num=0){
+    if(num!==cardHistory[cardHistory.length-1]){
+        if(lastExt!==num&&lastExt!==-1){
+            console.log("enter")
+            expansion(0,false)
+        }
+            // document.querySelector(`#card${lastExt} #extension`).style.display="none"}
+    }
     sort(num%9)
 }
 

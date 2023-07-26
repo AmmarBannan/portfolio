@@ -1,4 +1,74 @@
 @import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC");
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+#language {
+  height: 590px;
+  z-index: 13;
+  top: 50px;
+  left: 50px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.01;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+.properties {
+  height: 60%;
+}
+.properties * {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.properties .pointes {
+  border-radius: 13px;
+  position: relative;
+  min-height: 50%;
+  position: relative;
+  background-color: #8f7858;
+}
+.properties .pointes:focus-within .cover, .properties .pointes:hover .cover {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+.properties .pointes .cover {
+  border-radius: 13px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: width 2s;
+  z-index: 5;
+  transition: background-image 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.properties .strength {
+  background-image: url("../../static/1/strengthB.png");
+  margin-bottom: 4%;
+}
+.properties .strength .cover {
+  background-image: url("../../static/1/strength.png");
+  background-color: #8f7858;
+}
+.properties .weakness {
+  background-image: url("../../static/1/weaknessB.png");
+}
+.properties .weakness .cover {
+  background-image: url("../../static/1/weakness.png");
+  background-color: #8f7858;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -227,17 +297,6 @@ body {
   text-align: start;
 }
 
-.more {
-  position: absolute;
-  bottom: 2%;
-  right: 6%;
-  cursor: pointer;
-}
-.more:hover {
-  color: white;
-  text-shadow: -6px 5px 16px white;
-}
-
 .personal_info {
   position: relative;
 }
@@ -344,9 +403,108 @@ body {
   width: 100%;
 }
 
+.preloader {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(80, 78, 78, 0.7);
+  transition: display 1s;
+  position: relative;
+}
+
+.preloader__container {
+  display: block;
+  text-align: center;
+  margin-left: 55px;
+}
+
+.loading-container {
+  height: 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.circle {
+  border: 3px #0a0a0a solid;
+  float: left;
+  height: 70px;
+  margin: 0 5px;
+  width: 50px;
+}
+
+.circle-1 {
+  animation: move 1s ease-in-out infinite;
+}
+
+.circle-1a {
+  animation: fade 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.circle-2 {
+  animation: move 1s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(60px);
+  }
+}
+.circle-1a {
+  margin-left: -55px;
+  opacity: 0;
+}
+
+.circle-3 {
+  animation: circle-3 1s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes circle-3 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.preloader h1 {
+  color: #222;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 40px auto;
+  text-transform: uppercase;
+}
+
 #extension {
   width: 50%;
   display: none;
+}
+
+.more {
+  position: absolute;
+  bottom: 2%;
+  right: 6%;
+  cursor: pointer;
+}
+.more:hover {
+  color: white;
+  text-shadow: -6px 5px 16px white;
 }
 
 .exit {
