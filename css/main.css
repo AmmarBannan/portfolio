@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC");
 @import url(https://fonts.googleapis.com/css?family=Oswald);
+.charts {
+  margin-bottom: 2%;
+}
+
 #language {
   height: 590px;
   z-index: 13;
@@ -36,6 +40,13 @@
   min-height: 50%;
   position: relative;
   background-color: #8f7858;
+  color: rgb(200, 199, 199);
+}
+.properties .pointes h4 {
+  color: rgb(220, 219, 219);
+}
+.properties .pointes .weakPtn__item:not(:last-child), .properties .pointes .strPtn__item:not(:last-child) {
+  margin-bottom: 1%;
 }
 .properties .pointes:focus-within .cover, .properties .pointes:hover .cover {
   animation: fadeOut 1s;
@@ -120,7 +131,6 @@ a {
 }
 
 body {
-  background-image: url("../static/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 97vh;
@@ -155,14 +165,10 @@ body {
   max-height: 100%;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  background-color: #18aad7;
   display: flex;
   flex-direction: column;
-  border: 1 gray solid;
-  border: 2px solid black;
   border-radius: 8px 8px 14px 14px;
   padding: 15px 5px 5px 5px;
-  background: rgba(81, 88, 91, 0.7607843137);
   min-height: -moz-fit-content;
   min-height: fit-content;
   position: fixed;
@@ -171,12 +177,10 @@ body {
   background-color: gra;
   width: -moz-fit-content;
   width: fit-content;
-  color: white;
   margin-bottom: 10%;
 }
 .nav-bar .logo .sername {
   padding-left: 40%;
-  color: rgb(130, 104, 66);
 }
 .nav-bar .nav {
   display: flex;
@@ -184,7 +188,6 @@ body {
   position: sticky;
   border: 2px solid black;
   border-radius: 14px;
-  background-color: rgba(163, 162, 162, 0.7);
 }
 .nav-bar .nav :last-child {
   border-radius: 0 0 12px 12px;
@@ -199,53 +202,6 @@ body {
   padding: 10px 4px;
   cursor: pointer;
 }
-.nav-bar .nav__item:hover {
-  background-color: rgba(116, 112, 115, 0.4);
-}
-.nav-bar .nav .selected {
-  background-color: rgb(130, 104, 66);
-  color: #ffffff;
-  border: solid black 1px;
-}
-
-#card0 {
-  background-color: rgba(142, 119, 88, 0.7);
-}
-
-#card1 {
-  background-color: rgba(115, 68, 45, 0.7);
-}
-
-#card2 {
-  background-color: rgba(3, 14, 129, 0.7);
-  color: rgb(219, 216, 216);
-}
-
-#card3 {
-  background-color: rgba(169, 138, 105, 0.7);
-}
-
-#card4 {
-  background-color: rgba(24, 93, 123, 0.7);
-  color: rgb(213, 212, 212);
-}
-
-#card5 {
-  background-color: rgba(127, 131, 133, 0.7);
-}
-
-#card6 {
-  background-color: rgba(0, 94, 183, 0.7);
-  color: rgb(227, 226, 226);
-}
-
-#card7 {
-  background-color: rgba(87, 84, 84, 0.7);
-}
-
-#card8 {
-  background-color: rgba(135, 133, 129, 0.7);
-}
 
 .dashboard {
   display: flex;
@@ -257,7 +213,6 @@ body {
 .dashboard .card {
   max-width: -moz-fit-content;
   max-width: fit-content;
-  border: 5px solid gray;
   position: absolute;
   border-radius: 7%;
   display: flex;
@@ -272,12 +227,11 @@ body {
 .dashboard .card p, .dashboard .card li, .dashboard .card figcaption {
   transition: font-size 1s;
 }
-.dashboard .card:hover {
-  background-color: red;
+.dashboard .card__title {
+  margin-bottom: 2%;
 }
 .dashboard .card .container {
   max-width: 500px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   transition: top 2s cubic-bezier(0.7, 1, 0.3, 1), left 2s cubic-bezier(0.7, 1, 0.3, 1), width 1s cubic-bezier(0.7, 1, 0.3, 1), height 1s cubic-bezier(0.7, 1, 0.3, 1), zIndex 4s cubic-bezier(0.7, 1, 0.3, 1);
@@ -317,7 +271,7 @@ body {
 }
 .personal_info__id__text span {
   font-family: monospace;
-  color: rgb(100, 50, 0);
+  font-size: 10%;
 }
 .contact {
   position: relative;
@@ -328,22 +282,22 @@ body {
 .contact__list {
   font-family: monospace;
 }
-.contact__list .link {
-  color: blue;
-}
 
 .projects {
   position: relative;
   max-height: 100%;
 }
+.projects__filter {
+  margin-bottom: 2%;
+}
 .projects__filter__language {
-  border: gray 2px solid;
   border-radius: 6px;
 }
 .projects .projectsList {
   -moz-text-align-last: start;
        text-align-last: start;
   width: 90%;
+  margin-bottom: 2%;
 }
 .projects .projectsList .project__name {
   cursor: pointer;
@@ -380,7 +334,6 @@ body {
 .cont {
   width: 100px;
   height: 100px;
-  background-color: red;
 }
 .certifications .certifications-list {
   text-align: start;
@@ -401,6 +354,15 @@ body {
   transition: width 2s;
   background-color: transparent;
   width: 100%;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mode h3 {
+  margin-top: 12px;
 }
 
 .preloader {
@@ -516,4 +478,52 @@ body {
 .exit:hover {
   color: white;
   text-shadow: -6px 5px 16px white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.switch input:checked + .slider {
+  background-color: #331d60;
+}
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #331d60;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.switch .slider.round {
+  border-radius: 34px;
+}
+.switch .slider.round:before {
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */

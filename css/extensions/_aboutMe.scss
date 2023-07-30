@@ -1,5 +1,5 @@
 .charts{
-
+    margin-bottom: 2%;
 }
 #language{
     height: 590px;
@@ -25,7 +25,14 @@
         position: relative;
         min-height: 50%;
         position: relative;
-        background-color: #8f7858;
+        background-color: #8f7858;  
+        color:rgb(200, 199, 199);
+        h4{
+            color:rgb(220, 219, 219);
+        }
+        .weakPtn__item:not(:last-child),.strPtn__item:not(:last-child){
+            margin-bottom: 1%;
+        }
         &:focus-within,&:hover{
             .cover{
                 animation:fadeOut 1s;

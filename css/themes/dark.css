@@ -1,0 +1,62 @@
+body{
+    background-image: url("") !important;
+    background-color: #2e353a;
+}
+.nav-bar{
+    background-color: #331d60;
+    border: 1 gray solid;
+    border: 2px solid black;
+    background: #51585bc2;
+}
+.logo{
+    color: #09a8b7;
+    text-shadow: -6px -3px 17px #CDBDCE;
+}
+.sername{
+    color: #09a8b7;
+}
+.nav{
+    background-color: tra
+}
+.nav__item:hover{
+    background-color: rgb(78, 62, 86);
+}
+.selected{
+    background-color: rgb(87, 5, 114);
+    color: #ffffff;
+    border: solid black 1px;
+}
+
+[id^=card]:nth-child(3n+0){
+    background-color: #014a50;
+}
+[id^=card]:nth-child(3n+1){
+    background-color:#264a4e;
+}
+[id^=card]:nth-child(3n+2){
+    background-color:#40484b;
+}
+
+
+
+
+.personal_info__id__text span{
+    color: #09a8b7;
+}
+
+.contact__list .link{
+    color: blue;
+}
+
+.projects .description{
+    border-top: 2px solid gray;
+}
+
+
+.card{
+    border: 5px solid #142426;
+}
+
+.mode h3{
+    color:#331d60
+}

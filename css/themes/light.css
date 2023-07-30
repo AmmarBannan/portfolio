@@ -1,0 +1,57 @@
+body{
+    background-image: url("../static/1.jpg");
+
+}
+.nav-bar{
+    background-color: #18aad7;
+    border: 1 gray solid;
+    border: 2px solid black;
+    background: #51585bc2;
+}
+.logo{
+    color: white;
+}
+.sername{
+    color: rgb(130, 104, 66);
+}
+.nav{
+    background-color: rgb(163, 162, 162,.7);
+}
+.nav__item:hover{
+    background-color: rgba(116, 112, 115, 0.4);
+}
+.selected{
+    background-color: rgb(130, 104, 66);
+    color: #ffffff;
+    border: solid black 1px;
+}
+#card0{background-color: rgb(142, 119, 88, 0.70);}
+#card1{background-color: rgb(115, 68, 45, 0.70);}
+#card2{background-color: rgb(3, 14, 129, 0.70);color:rgb(219, 216, 216)}
+#card3{background-color: rgb(169, 138, 105, 0.70);}
+#card4{background-color: rgb(24, 93, 123, 0.70);color: rgb(213, 212, 212);}
+#card5{background-color: rgba(127,131,133, 0.70);}
+#card6{background-color: rgb(0, 94, 183, 0.70);color: rgb(227, 226, 226);}
+#card7{background-color: rgb(87, 84, 84, 0.70);}
+#card8{background-color: rgba(135, 133, 129, 0.70);}
+
+.personal_info__id__text span{
+    color: rgb(100, 50, 0);
+}
+
+.contact__list .link{
+    color: blue;
+}
+
+.projects .description{
+    border-top: 2px solid gray;
+}
+
+
+.card{
+    border: 5px solid gray;
+}
+
+.mode h3{
+    color:rgb(130, 104, 66);
+}

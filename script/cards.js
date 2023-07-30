@@ -13,12 +13,15 @@ let fontAdapter=(container,i)=>{
         document.querySelectorAll(`#card${i} figcaption`).forEach((font)=>font.style.fontSize =`${cardWidth*0.021}px` )
         document.querySelectorAll(`#card${i} h1`).forEach((font)=>font.style.fontSize =`${cardWidth*0.04177}px`)
         document.querySelectorAll(`#card${i} h2`).forEach((font)=>font.style.fontSize =`${cardWidth*0.036857}px`)
-        document.querySelectorAll(`#card${i} h3`).forEach((font)=>font.style.fontSize =`${cardWidth*0.0294857}px`)
+        document.querySelectorAll(`#card${i} h3,#card${i} span`).forEach((font)=>font.style.fontSize =`${cardWidth*0.0294857}px`)
         document.querySelectorAll(`#card${i} h4`).forEach((font)=>font.style.fontSize =`${cardWidth*0.02457}px`)
 }
 
-function transparency(card,i){
-    const cssObj = window.getComputedStyle(card, null);
+function transparency(cardid,i){
+    // const cssObj = window.getComputedStyle(card, null);
+    let card= document.querySelector(`#card${cardid}`)
+    const cssObj = card
+    console.log("cssObj",card.style.getPropertyValue("background"))
     if(i==0){card.style.background=cssObj.getPropertyValue("background-color").slice(0, -4)+'0.98)'}
     else{ card.style.background=cssObj.getPropertyValue("background-color").slice(0, -4)+'0.79)'}
 }
@@ -70,13 +73,12 @@ let edit=(cardId,i=0,len)=>{
 
     let EWidth=widthPX
   
-    card.style.left=`calc(${shiftX}px)`;
     container.style.height=`${height}px`
     container.style.width=`${EWidth}px`
     
     card.style.padding=`${widthPX*.06}px ${widthPX*.03}px`
 
-    transparency(card,posI)
+    // transparency(cardId,posI)
     fontAdapter(container,cardId)
     
 }
