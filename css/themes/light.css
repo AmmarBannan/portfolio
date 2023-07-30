@@ -55,3 +55,7 @@ body{
 .mode h3{
     color:rgb(130, 104, 66);
 }
+
+.pointes,.cover{
+    background-color: #8f7858;
+}

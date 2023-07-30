@@ -39,7 +39,6 @@
   position: relative;
   min-height: 50%;
   position: relative;
-  background-color: #8f7858;
   color: rgb(200, 199, 199);
 }
 .properties .pointes h4 {
@@ -70,14 +69,12 @@
 }
 .properties .strength .cover {
   background-image: url("../../static/1/strength.png");
-  background-color: #8f7858;
 }
 .properties .weakness {
   background-image: url("../../static/1/weaknessB.png");
 }
 .properties .weakness .cover {
   background-image: url("../../static/1/weakness.png");
-  background-color: #8f7858;
 }
 
 h1, h2, h3, h4, h5, h6, p {

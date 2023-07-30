@@ -27,7 +27,7 @@ body{
     border: solid black 1px;
 }
 
-[id^=card]:nth-child(3n+0){
+/* [id^=card]:nth-child(3n+0){
     background-color: #014a50;
 }
 [id^=card]:nth-child(3n+1){
@@ -35,6 +35,21 @@ body{
 }
 [id^=card]:nth-child(3n+2){
     background-color:#40484b;
+} */
+[id^=card]{
+    background-color:#40484b;
+}
+
+.container{
+    border: #142426 solid 3px;
+    border-radius: 16px;
+}
+.container .card__title,.card .more{
+    color: #09a8b7;
+}
+
+.cover,.pointes{
+    background-color: transparent;
 }
 
 
@@ -45,7 +60,7 @@ body{
 }
 
 .contact__list .link{
-    color: blue;
+    color: #127ea5;
 }
 
 .projects .description{
@@ -59,4 +74,17 @@ body{
 
 .mode h3{
     color:#331d60
+}
+
+.pointes,.cover{
+    background-color: #40484b;
+}
+
+#message{
+    color: white;
+    border:none
+}
+
+h3{
+    color:#6f95a2;
 }
