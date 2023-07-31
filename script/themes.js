@@ -13,7 +13,7 @@ mode=localStorage.getItem("mode")
 var link = document.createElement( "link" );
 if(mode=="true"){
     link.href="./css/themes/dark.css";
-    
+    document.querySelector('.switch input').checked = true;
 }else{
     link.href="./css/themes/light.css";
     document.querySelector('.switch input').checked = false;

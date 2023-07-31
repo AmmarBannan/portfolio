@@ -114,7 +114,7 @@ let buttonSelected=(cardHistory)=>{
 }
 
 function background(i){
-    document.body.style.backgroundImage=`url("../static/${i}.jpg")`;
+    document.body.style.backgroundImage=`url("./static/${i}.jpg")`;
 }
 
 
